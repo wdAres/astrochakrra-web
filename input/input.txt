@@ -1,0 +1,245 @@
+PROJECT BRIEF — AstroChakrra
+A React.js single-page website for a Vedic astrologer.
+
+----------------------------------------------------------------
+VISION
+----------------------------------------------------------------
+
+Build a calm, premium, highly accurate landing page for AstroChakrra
+("Vedic Wisdom for a Balanced Life"). The site should feel like a
+private consultation room: warm, trustworthy, and composed — never
+loud, never cluttered.
+
+A visitor should immediately understand:
+  1. Who this is for (people seeking clarity on marriage, career,
+     family, vastu, numerology, and timing).
+  2. Who the astrologer is and why they can be trusted.
+  3. How a consultation works, what services exist, and what
+     packages they can book.
+  4. How to book in one click, from any section of the page.
+
+Every CTA leads to one booking modal. Every card and package
+pre-fills the relevant service. All content comes from a single
+data file so the site can later connect to an API without
+rewriting the UI.
+
+UI DESIGN
+  Follow input-fe.jpeg in this folder as the source of truth for
+  layout, typography, spacing, colour, and overall visual language.
+  Desktop and mobile compositions are both shown in that file —
+  match them closely.
+
+----------------------------------------------------------------
+TECHNICAL APPROACH
+----------------------------------------------------------------
+
+- Deliver as a React.js single-page application (SPA).
+- One page, smooth in-page scroll. Navbar links jump to sections.
+- Structure the app as reusable section components.
+- Keep everything programmatically correct so an API can be
+  connected later with minimal change.
+- Drive the site from a single data file (for example
+  src/data/siteData.js). Populate at least these from that file:
+    • service cards
+    • consultation packages
+    • testimonials
+    • FAQs
+    • navigation items
+    • trust points
+    • consultation process steps
+    • “what brings you here” topic cards
+  Components must map over this data. Do not hardcode card lists
+  inside JSX.
+- Make the entire site highly responsive. Mobile must include a
+  sidebar / drawer navigation.
+- Add a fixed floating WhatsApp button at the bottom-right on
+  every viewport.
+
+----------------------------------------------------------------
+COLOUR THEME
+----------------------------------------------------------------
+
+Use the palette from the reference image:
+
+  Cream / ivory page background
+  Soft parchment / beige section fills
+  Deep navy / charcoal for dark bands and headings
+  Gold / warm metallic for accents, borders, icons, and CTAs
+  White cards with subtle gold or ink outlines
+  Warm brown / ink body text
+
+Do not invent a new palette. The theme is astrology-related:
+lotus motifs, fine gold line work, and a quiet, editorial feel.
+
+----------------------------------------------------------------
+SECTIONS AND COMPONENTS
+----------------------------------------------------------------
+
+1. NAVBAR
+   Links: Home, About, Services, Consultation, Testimonials,
+   FAQ, Contact.
+   Primary CTA button: “Book a Consultation”.
+   Desktop: horizontal nav.
+   Mobile: hamburger that opens a friendly sidebar / drawer
+   with the same links and CTA.
+   Sticky on scroll.
+
+2. HERO
+   Headline:
+     Ancient Wisdom. Precise Interpretation. Clearer Decisions.
+   Supporting copy:
+     Vedic astrology, numerology and vastu offer deeper insights
+     into your life patterns, helping you make conscious and
+     confident decisions.
+   CTA: “Book a Private Consultation”.
+   Trust tags: Vedic Astrology · Numerology · Vastu · Tarot ·
+   Private · Personalised · Confidential.
+   Hero image: placeholder for now (the astrologer’s portrait
+   will be uploaded later). Keep layout, overlay, and caption
+   space ready.
+
+3. WHAT BRINGS YOU HERE
+   Heading: “What brings you here?”
+   Subheading: “Guidance for the questions that matter.”
+   A grid of topic cards (image, title, short line), for example:
+     Marriage & Compatibility
+     Career & Business
+     Family & Life
+     Vastu
+     Name & Numerology
+     Muhurat & Timing
+   Clicking a card opens the booking modal with that topic
+   pre-selected as the service.
+
+4. ABOUT / MEET THE ASTROLOGER
+   Heading: “Meet the Astrologer”
+   Subheading: “A blend of tradition, research and real-life insights.”
+   Layout: portrait on one side; heading, paragraph, and
+   supporting graphics on the other.
+   Feature chips:
+     Authentic Vedic Knowledge
+     Practical & Modern Approach
+     Compassionate Guidance
+     Confidential & Non-judgemental
+   Secondary CTA: “Know More” (scrolls to a relevant section
+   or opens more about copy).
+   Include a dedicated client-facing block: her image, heading,
+   paragraph, and decorative graphics (lotus / gold line art).
+
+5. CONSULTATION PROCESS
+   Heading: “How Your Consultation Works”
+   Subheading: “A simple and meaningful process.”
+   Present the four steps in a beautiful, easy-to-follow flow:
+     01  Birth Details
+         Share your date, time and place of birth
+         (along with your question).
+     02  Chart Analysis
+         Your kundli is studied in depth using Vedic principles
+         and relevant systems.
+     03  Personal Consultation
+         One-to-one session (online or in-person) to discuss
+         insights, answers and guidance.
+     04  Written Guidance
+         Key points and remedies shared in a concise written
+         format (after consultation).
+
+6. SERVICES
+   Heading: “Signature Services”
+   Subheading: “Personalised guidance across life areas.”
+   Card grid. Each service card has:
+     image, title, and a short description.
+   Example services (from data file):
+     Personal Kundli
+     Marriage / Kundli Matching
+     Career & Business
+     Name Numerology
+     Vastu Consultation
+     Gemstone Guidance
+     Timing / Muhurat
+   Clicking a service card opens the booking modal with that
+   service pre-selected.
+
+7. CONSULTATION PACKAGES
+   Heading: “Consultation Packages”
+   Subheading: “Flexible sessions for your needs.”
+   Package cards from the data file, for example:
+     30 Minutes — Quick Clarity Session
+     60 Minutes — Detailed Consultation  (marked “Most Popular”)
+     90 Minutes — In-Depth Consultation
+   Each card has a “Book Now” button.
+   Side panel: “All packages include…” (personalised insight,
+   practical guidance & remedies, post-consultation notes,
+   complete confidentiality).
+   Clicking Book Now opens the booking modal with that package
+   / related service pre-selected.
+
+8. WHY CLIENTS TRUST US
+   Four trust points with icons, for example:
+     Authentic Methodology
+     Years of Experience
+     Confidential & Safe Space
+     Transparent Consultation
+   Driven from the data file.
+
+9. TESTIMONIALS
+   Heading: “Client Experiences”
+   Subheading: “Real stories. Meaningful journeys.”
+   Carousel or slider of testimonials from the data file
+   (quote, name, location). Keep it elegant and readable.
+
+10. FAQ
+    Heading: “Frequently Asked Questions”
+    Accordion from the data file. Cover practical questions
+    (what to share, online vs in-person, written summary,
+    consulting for family, remedies, etc.).
+
+11. CLOSING CTA + FOOTER
+    Closing line:
+      Your chart is unique. Your consultation should be too.
+      Seek clarity. Find alignment. Move forward with confidence.
+    CTA: “Book a Private Consultation”.
+    Sleek footer with a short brand message, the same CTA,
+    and basic links / contact.
+
+12. FLOATING WHATSAPP BUTTON
+    Fixed at the bottom-right of the viewport on all devices.
+    Opens WhatsApp with a pre-filled greeting.
+
+----------------------------------------------------------------
+BOOKING MODAL
+----------------------------------------------------------------
+
+One shared modal for every CTA, service card, and package button.
+
+Fields:
+  - Name
+  - Email
+  - Query (message / what they want guidance on)
+  - Service — a select dropdown listing every service type
+
+Behaviour:
+  - Navbar / hero / footer CTA → modal opens with no service
+    pre-selected (or a sensible default).
+  - Clicking a service card → modal opens with that service
+    already selected.
+  - Clicking a package “Book Now” → modal opens with the
+    matching service / package already selected.
+  - Each card maps to its own service type in the modal list.
+  - Form should be ready to submit to an API later; for now
+    it can log / store locally or show a success state.
+
+----------------------------------------------------------------
+QUALITY BAR
+----------------------------------------------------------------
+
+Make the site look accurate, polished, and cool — a premium
+astrology brand, not a generic template.
+
+- Pixel-aware spacing, consistent type scale, refined cards.
+- Decorative graphics that support the theme (lotus, gold
+  lines, subtle texture) without cluttering content.
+- Smooth scroll, tasteful hover states, accessible focus.
+- Highly responsive: the mobile layout in the reference image
+  is the target for small screens.
+- Content, colours, and structure must stay in lockstep
+  with input-fe.jpeg.
