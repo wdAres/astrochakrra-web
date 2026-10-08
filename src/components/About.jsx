@@ -21,7 +21,7 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent lg:bg-gradient-to-r" />
         </div>
-        <div className="relative px-6 py-16 md:px-12 lg:px-16 lg:py-24">
+        <div className="page-pad relative py-16 lg:py-24">
           <h2 className="display text-4xl text-ivory md:text-5xl">{about.heading}</h2>
           <p className="eyebrow mt-4">{about.eyebrow}</p>
           <div className="mt-8 max-w-xl space-y-5 text-[15px] leading-7 text-ivory/80">

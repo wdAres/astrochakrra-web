@@ -10,7 +10,7 @@ export default function Hero() {
     <section id="home" className="relative overflow-hidden bg-cream pt-[4.6rem]">
       <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
       <div className="grid min-h-[calc(100vh-4.6rem)] lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="relative flex flex-col justify-center px-6 py-16 md:px-12 lg:px-16">
+        <div className="page-pad relative flex flex-col justify-center py-16">
           <p className="eyebrow mb-6">Private · Personalised · Confidential</p>
           <h1 className="display text-[2.7rem] text-navy sm:text-5xl lg:text-[3.6rem]">
             {hero.headline.map((line) => (
